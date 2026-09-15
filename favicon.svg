@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" fill="#efece4"/>
+  <g stroke="#b68235" stroke-width="2" opacity="0.6">
+    <path d="M30 0V100M70 0V100M0 30H100M0 70H100"/>
+  </g>
+  <text x="50" y="60" text-anchor="middle" font-family="Georgia, 'Cormorant Garamond', serif" font-size="30" fill="#201f1d">GB</text>
+</svg>
