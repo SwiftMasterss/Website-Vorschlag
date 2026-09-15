@@ -393,7 +393,7 @@ a:hover { color: var(--color-accent-800); }
   opacity: 1;
   transform: scale(1);
 }
-.map-tooltip > div:first-child { margin-top: 0; }
+.map-tooltip > div:first-child { margin-top: 5; }
 .map-tooltip {
   /* Gleiche Milchglas-Optik wie das .hero-content-Panel: runde Kanten,
      halbtransparentes Weiß + Blur statt einer flachen Fläche. */
