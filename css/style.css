@@ -146,9 +146,12 @@ a:hover { color: var(--color-accent-800); }
 }
 .logo-link { display: block; flex-shrink: 1; min-width: 0; }
 .logo-img {
-  width: var(--text-block-width);
+  /* min() statt separatem max-width: die Transition muss das tatsächlich
+     sichtbare Breiten-Ziel kennen. Mit einem ungekappten Ziel (500px) rast
+     die Easing-Kurve beim Scrollen nach oben weit über den sichtbaren
+     Bereich hinaus und wirkt dadurch abgehackt statt smooth. */
+  width: min(var(--text-block-width), 100%);
   height: auto;
-  max-width: 100%;
   mix-blend-mode: multiply;
   transition: width 1000ms cubic-bezier(0.23, 1, 0.32, 1);
 }
