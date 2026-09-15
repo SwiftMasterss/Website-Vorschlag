@@ -461,7 +461,16 @@ a:hover { color: var(--color-accent-800); }
 }
 
 @media (max-width: 860px) {
-  .nav-toggle { display: flex; }
+  /* Ganz oben (ungescrollt) ist der Menü-Button noch unsichtbar, damit
+     das Logo mittig steht. Sobald der Header in den kompakten
+     is-scrolled-Zustand wechselt, taucht der Button rechts auf und das
+     Logo rückt dafür nach links – siehe js/main.js applyScrolledState(). */
+  .nav-toggle { display: none; }
+  .header-inner { justify-content: center; }
+
+  .site-header.is-scrolled .nav-toggle { display: flex; }
+  .site-header.is-scrolled .header-inner { justify-content: space-between; }
+
   .primary-nav {
     position: absolute;
     top: 100%;
