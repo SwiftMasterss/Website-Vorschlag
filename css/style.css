@@ -460,6 +460,13 @@ a:hover { color: var(--color-accent-800); }
   .hero-content h1 { font-size: 46px; }
 }
 
+/* In diesem schmalen Zwischenbereich ist die Kartenspalte proportional
+   breit genug, dass der Pin weit rechts landet und das Standort-Feld
+   (230px, siehe .map-tooltip) sonst über den Rand hinausragt. */
+@media (min-width: 861px) and (max-width: 920px) {
+  .map-tooltip { left: 16px; width: 150px; }
+}
+
 @media (max-width: 860px) {
   /* Ganz oben (ungescrollt) ist der Menü-Button noch unsichtbar, damit
      das Logo mittig steht. Sobald der Header in den kompakten
@@ -511,4 +518,11 @@ a:hover { color: var(--color-accent-800); }
   .hero-actions .btn { text-align: center; }
   .footer-contact { text-align: left; }
   .footer-inner { justify-content: flex-start; }
+
+  /* Das Standort-Feld ist absolut zum Pin positioniert – auf schmalen
+     Screens reicht sein fester Wert (230px) bis dicht an den
+     Webseitenrand. Schmaler machen und über max-width zusätzlich an
+     die Viewport-Breite koppeln, damit auch auf sehr kleinen Handys
+     ein Abstand zum Rand bleibt. */
+  .map-tooltip { left: 16px; width: 150px; max-width: calc(100vw - 48px); }
 }
